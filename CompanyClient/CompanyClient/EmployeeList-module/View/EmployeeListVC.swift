@@ -11,32 +11,63 @@ class EmployeeListVC: UIViewController {
 
     @IBOutlet weak var employeeTableView: UITableView!
     var myCompany: Company?
-    
+    var emmloyeesToShow: [EmployeeProtocol] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         guard myCompany != nil else { return }
+        
+       
         employeeTableView.delegate = self
         employeeTableView.dataSource = self
         
+        // register EmployeeListCell
+       employeeTableView.register(UINib(nibName: "EmployeeListCell", bundle: nil), forCellReuseIdentifier: "EmployeeItemCell")
         
-        employeeTableView.register(UINib(nibName: "EmployeeListCell", bundle: nil), forCellReuseIdentifier: "EmployeeItemCell")
+        emmloyeesToShow = myCompany!.employees
+        
+        // set UISearchController()
+        setSearchBar()
+        
+      
         
     }
 }
 
-extension EmployeeListVC: UITableViewDelegate {
+extension EmployeeListVC: UISearchResultsUpdating {
+    func setSearchBar(){
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.placeholder = "Type something to search"
+        searchController.hidesNavigationBarDuringPresentation = true
+        searchController.automaticallyShowsCancelButton = true
+
+
+        navigationItem.searchController = searchController
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else { return }
+        emmloyeesToShow = myCompany!.employees.filter { $0.name.uppercased().hasPrefix(text.uppercased())}
+        if text == "" {
+            emmloyeesToShow = myCompany!.employees
+        }
+        employeeTableView.reloadData()
+        
+    }
+    
     
 }
 
-extension EmployeeListVC: UITableViewDataSource {
+extension EmployeeListVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        myCompany!.employees.count
+        emmloyeesToShow.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "EmployeeItemCell", for: indexPath) as? EmployeeListCell else { return  UITableViewCell() }
-        let employee = myCompany!.employees[indexPath.row]
+        let employee = emmloyeesToShow[indexPath.row]
         cell.configure(model: employee)
         cell.selectionStyle = .none
         return cell
