@@ -28,8 +28,8 @@ class EmployeeListCell: UITableViewCell {
     func configure(model employee: EmployeeProtocol){
         nameLabel.text = employee.name
         ageLabel.text = String(employee.age)
-        maritalStatusLabel.text = employee.maritalStatus.rawValue
-        developerTypeLabel.text = employee.developerType?.rawValue
+        maritalStatusLabel.text = employee.maritalStatus.toString
+        developerTypeLabel.text = employee.developerType?.toString
         salaryLabel.text = String(employee.salary!)
     
     }

@@ -12,6 +12,7 @@
 		784F89B629242E4A001AFBE1 /* EmployeeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89B529242E4A001AFBE1 /* EmployeeListVC.swift */; };
 		784F89BA29243494001AFBE1 /* EmployeeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89B829243494001AFBE1 /* EmployeeListCell.swift */; };
 		784F89BB29243494001AFBE1 /* EmployeeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 784F89B929243494001AFBE1 /* EmployeeListCell.xib */; };
+		784F89F02927D527001AFBE1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89EF2927D527001AFBE1 /* Extensions.swift */; };
 		7890AA8029222B0E0069E176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7890AA7F29222B0E0069E176 /* AppDelegate.swift */; };
 		7890AA8229222B0E0069E176 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7890AA8129222B0E0069E176 /* SceneDelegate.swift */; };
 		7890AA8429222B0E0069E176 /* CompanyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7890AA8329222B0E0069E176 /* CompanyVC.swift */; };
@@ -30,6 +31,7 @@
 		784F89B529242E4A001AFBE1 /* EmployeeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListVC.swift; sourceTree = "<group>"; };
 		784F89B829243494001AFBE1 /* EmployeeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListCell.swift; sourceTree = "<group>"; };
 		784F89B929243494001AFBE1 /* EmployeeListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeListCell.xib; sourceTree = "<group>"; };
+		784F89EF2927D527001AFBE1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7890AA7C29222B0E0069E176 /* CompanyClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompanyClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7890AA7F29222B0E0069E176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7890AA8129222B0E0069E176 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		784F89F12927D52C001AFBE1 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				784F89EF2927D527001AFBE1 /* Extensions.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		7890AA7329222B0E0069E176 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +110,7 @@
 				7890AA9929222E2C0069E176 /* Company-module */,
 				7890AA9C29222EC60069E176 /* AddEmployee-module */,
 				784F89B429242DE8001AFBE1 /* EmployeeList-module */,
+				784F89F12927D52C001AFBE1 /* Utility */,
 			);
 			path = CompanyClient;
 			sourceTree = "<group>";
@@ -242,6 +253,7 @@
 				784F89B02923ED20001AFBE1 /* UserDefaults-Extension.swift in Sources */,
 				7890AAA12922636B0069E176 /* EmployeeVC.swift in Sources */,
 				7890AA8429222B0E0069E176 /* CompanyVC.swift in Sources */,
+				784F89F02927D527001AFBE1 /* Extensions.swift in Sources */,
 				7890AA9E29222F1A0069E176 /* Employee.swift in Sources */,
 				7890AA8029222B0E0069E176 /* AppDelegate.swift in Sources */,
 				784F89BA29243494001AFBE1 /* EmployeeListCell.swift in Sources */,

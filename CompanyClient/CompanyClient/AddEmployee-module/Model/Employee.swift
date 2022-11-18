@@ -10,15 +10,26 @@ import Foundation
 //MARK: - EMPLOYEE
 
 //Employee level
-enum DeveloperType: String, CaseIterable {
-    case intern = "intern"
-    case junior = "junior"
-    case mid = "mid"
-    case senior = "senior"
-}
-
-// Employee salary coefficient
-extension DeveloperType {
+enum DeveloperType: CaseIterable {
+    case intern
+    case junior
+    case mid
+    case senior
+    
+    var toString: String {
+        switch self {
+        case .intern:
+            return "Intern"
+        case .junior:
+            return "Junior"
+        case .mid:
+            return "Mid"
+        case .senior:
+            return "Senior"
+        }
+    }
+    
+    // Employee salary coefficient
     var coefficient: Int {
         switch self {
         case .intern:
@@ -34,9 +45,49 @@ extension DeveloperType {
 }
 
 //Marital status of employee
-enum MaritalStatus: String, CaseIterable {
-    case married = "Evli"
-    case single = "Bekar"
+enum MaritalStatus: CaseIterable {
+    case married
+    case single
+    
+    var toString: String {
+        switch self {
+        case .single:
+            return "Single"
+        case .married:
+            return "Married"
+        }
+    }
+}
+
+
+extension String {
+    func toDeveloperType() -> DeveloperType? {
+        switch self {
+        case "Intern":
+            return .intern
+        case "Junior":
+            return .junior
+        case "Mid":
+            return .mid
+        case "Senior":
+            return .senior
+        default:
+            return nil
+        }
+    }
+    
+    func toMaritalStatus() -> MaritalStatus? {
+        switch self {
+        case "Married":
+            return .married
+        case "Single":
+            return .single
+        default:
+            return nil
+        }
+    
+        
+    }
 }
 
 protocol EmployeeProtocol {

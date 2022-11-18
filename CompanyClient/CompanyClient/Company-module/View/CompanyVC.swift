@@ -21,7 +21,6 @@ class CompanyVC: UIViewController {
         super.viewDidLoad()
         setCompany()
         
-        
         let tolga = Employee(name: "Tolga", age: 25, maritalStatus: .married)
         myCompany.addEmployeeToCompany(tolga, developerType: .mid)
         

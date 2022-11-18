@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EmployeeVC: UIViewController, UITextFieldDelegate {
+class EmployeeVC: UIViewController {
     
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var ageTextField: UITextField!
@@ -19,7 +19,7 @@ class EmployeeVC: UIViewController, UITextFieldDelegate {
     let developerTypeArray = DeveloperType.allCases
     var ageArray = Array(18...55)
     var myCompany: Company?
-
+    
     
     
     override func viewDidLoad() {
@@ -29,13 +29,13 @@ class EmployeeVC: UIViewController, UITextFieldDelegate {
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
         
     }
-   
+    
     @IBAction func textFieldsEditingChanged(_ sender: UITextField) {
         
-        guard let ageString = ageTextField.text else { return }
-        guard let age = Int(ageString) else { return }
-        guard let developerTypeString = developerTypeTextField.text else { return }
-        guard let developerType = DeveloperType(rawValue: developerTypeString) else { return }
+        guard let ageString = ageTextField.text,
+              let age = ageString.toInteger(),
+              let developerTypeString = developerTypeTextField.text,
+              let developerType = developerTypeString.toDeveloperType() else { return }
         
         salaryLabel.text = String(Employee.calculateSalary(age: age, developerType: developerType)) + "₺"
     }
@@ -47,15 +47,16 @@ class EmployeeVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func addEmployeeButton(_ sender: Any) {
-        guard let myCompany else { return }
-        guard let name = nameTextField.text else { return }
-        guard let ageString = ageTextField.text else { return }
-        guard let age = Int(ageString) else { return }
-        guard let maritalStatus =  maritalStatusTextField.text else { return }
-        guard let developerTypeString = developerTypeTextField.text else { return }
-        guard let developerType = DeveloperType(rawValue: developerTypeString) else { return }
+        guard let myCompany ,
+              let name = nameTextField.text ,
+              let ageString = ageTextField.text ,
+              let age = ageString.toInteger() ,
+              let maritalStatusString =  maritalStatusTextField.text,
+              let maritalStatus = maritalStatusString.toMaritalStatus(),
+              let developerTypeString = developerTypeTextField.text ,
+              let developerType = developerTypeString.toDeveloperType() else { return }
         
-        let employee = Employee(name: name, age: age, maritalStatus: MaritalStatus(rawValue: maritalStatus)!)
+        let employee = Employee(name: name, age: age, maritalStatus: maritalStatus)
         
         myCompany.addEmployeeToCompany(employee, developerType: developerType)
         self.dismiss(animated: true)
@@ -64,7 +65,7 @@ class EmployeeVC: UIViewController, UITextFieldDelegate {
 }
 
 //MARK: - UIPickerDelegete
-extension EmployeeVC: UIPickerViewDelegate {
+extension EmployeeVC: UIPickerViewDelegate, UITextFieldDelegate {
     
     private func setTextFieldOptionsForPicker(){
         let picker = UIPickerView()
@@ -99,7 +100,7 @@ extension EmployeeVC: UIPickerViewDataSource {
         }
         else if developerTypeTextField.isFirstResponder {
             return developerTypeArray.count
-         
+            
         }
         return 0
     }
@@ -108,13 +109,13 @@ extension EmployeeVC: UIPickerViewDataSource {
         
         if maritalStatusTextField.isFirstResponder {
             
-            maritalStatusTextField.text = maritalStatusArray[row].rawValue
+            maritalStatusTextField.text = maritalStatusArray[row].toString
         }
         else if ageTextField.isFirstResponder {
             ageTextField.text = "\(ageArray[row])"
         }
         else if developerTypeTextField.isFirstResponder {
-            developerTypeTextField.text =  developerTypeArray[row].rawValue
+            developerTypeTextField.text =  developerTypeArray[row].toString
         }
         
     }
@@ -122,13 +123,13 @@ extension EmployeeVC: UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if maritalStatusTextField.isFirstResponder {
             
-            return maritalStatusArray[row].rawValue
+            return maritalStatusArray[row].toString
         }
         else if ageTextField.isFirstResponder {
             return "\(ageArray[row])"
         }
         else if developerTypeTextField.isFirstResponder {
-            return developerTypeArray[row].rawValue
+            return developerTypeArray[row].toString
         }
         return nil
     }
