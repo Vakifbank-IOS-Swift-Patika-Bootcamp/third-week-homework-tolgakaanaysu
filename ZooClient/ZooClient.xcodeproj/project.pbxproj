@@ -7,23 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		782F086F2928316A00E52436 /* ZookeepersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782F086E2928316A00E52436 /* ZookeepersListVC.swift */; };
 		784F89C929252F70001AFBE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89C829252F70001AFBE1 /* AppDelegate.swift */; };
 		784F89CB29252F70001AFBE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89CA29252F70001AFBE1 /* SceneDelegate.swift */; };
-		784F89CD29252F70001AFBE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89CC29252F70001AFBE1 /* ViewController.swift */; };
+		784F89CD29252F70001AFBE1 /* HomepageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89CC29252F70001AFBE1 /* HomepageVC.swift */; };
 		784F89D029252F70001AFBE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 784F89CE29252F70001AFBE1 /* Main.storyboard */; };
 		784F89D229252F72001AFBE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 784F89D129252F72001AFBE1 /* Assets.xcassets */; };
 		784F89D529252F72001AFBE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 784F89D329252F72001AFBE1 /* LaunchScreen.storyboard */; };
+		784F89DE2925317B001AFBE1 /* Zoo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89DD2925317B001AFBE1 /* Zoo.swift */; };
+		784F89E0292531AE001AFBE1 /* Zookeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89DF292531AE001AFBE1 /* Zookeeper.swift */; };
+		784F89E2292531C2001AFBE1 /* AnimalsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89E1292531C2001AFBE1 /* AnimalsProtocol.swift */; };
+		784F89E729269C3F001AFBE1 /* AddZookeeperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89E629269C3F001AFBE1 /* AddZookeeperVC.swift */; };
+		784F89E929269C54001AFBE1 /* AddAnimalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89E829269C54001AFBE1 /* AddAnimalVC.swift */; };
+		784F89EB29269C81001AFBE1 /* AnimalsListsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89EA29269C81001AFBE1 /* AnimalsListsVC.swift */; };
+		784F89EE2927D3D0001AFBE1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89ED2927D3D0001AFBE1 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		782F086E2928316A00E52436 /* ZookeepersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZookeepersListVC.swift; sourceTree = "<group>"; };
 		784F89C529252F70001AFBE1 /* ZooClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZooClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		784F89C829252F70001AFBE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		784F89CA29252F70001AFBE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		784F89CC29252F70001AFBE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		784F89CC29252F70001AFBE1 /* HomepageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageVC.swift; sourceTree = "<group>"; };
 		784F89CF29252F70001AFBE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		784F89D129252F72001AFBE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		784F89D429252F72001AFBE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		784F89D629252F72001AFBE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		784F89DD2925317B001AFBE1 /* Zoo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zoo.swift; sourceTree = "<group>"; };
+		784F89DF292531AE001AFBE1 /* Zookeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zookeeper.swift; sourceTree = "<group>"; };
+		784F89E1292531C2001AFBE1 /* AnimalsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsProtocol.swift; sourceTree = "<group>"; };
+		784F89E629269C3F001AFBE1 /* AddZookeeperVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddZookeeperVC.swift; path = ZooClient/View/AddZookeeperVC.swift; sourceTree = SOURCE_ROOT; };
+		784F89E829269C54001AFBE1 /* AddAnimalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnimalVC.swift; sourceTree = "<group>"; };
+		784F89EA29269C81001AFBE1 /* AnimalsListsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsListsVC.swift; sourceTree = "<group>"; };
+		784F89ED2927D3D0001AFBE1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,63 @@
 		784F89C729252F70001AFBE1 /* ZooClient */ = {
 			isa = PBXGroup;
 			children = (
-				784F89C829252F70001AFBE1 /* AppDelegate.swift */,
-				784F89CA29252F70001AFBE1 /* SceneDelegate.swift */,
-				784F89CC29252F70001AFBE1 /* ViewController.swift */,
-				784F89CE29252F70001AFBE1 /* Main.storyboard */,
-				784F89D129252F72001AFBE1 /* Assets.xcassets */,
-				784F89D329252F72001AFBE1 /* LaunchScreen.storyboard */,
-				784F89D629252F72001AFBE1 /* Info.plist */,
+				784F89EC2927D3C3001AFBE1 /* Utility */,
+				784F89E529253423001AFBE1 /* Storyboards */,
+				784F89DC29252FD5001AFBE1 /* SupportFiles */,
+				784F89E3292533F5001AFBE1 /* Model */,
+				784F89E42925340D001AFBE1 /* View */,
 			);
 			path = ZooClient;
+			sourceTree = "<group>";
+		};
+		784F89DC29252FD5001AFBE1 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				784F89C829252F70001AFBE1 /* AppDelegate.swift */,
+				784F89CA29252F70001AFBE1 /* SceneDelegate.swift */,
+				784F89D129252F72001AFBE1 /* Assets.xcassets */,
+				784F89D629252F72001AFBE1 /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		784F89E3292533F5001AFBE1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				784F89DF292531AE001AFBE1 /* Zookeeper.swift */,
+				784F89E1292531C2001AFBE1 /* AnimalsProtocol.swift */,
+				784F89DD2925317B001AFBE1 /* Zoo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		784F89E42925340D001AFBE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				784F89CC29252F70001AFBE1 /* HomepageVC.swift */,
+				784F89E629269C3F001AFBE1 /* AddZookeeperVC.swift */,
+				784F89E829269C54001AFBE1 /* AddAnimalVC.swift */,
+				784F89EA29269C81001AFBE1 /* AnimalsListsVC.swift */,
+				782F086E2928316A00E52436 /* ZookeepersListVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		784F89E529253423001AFBE1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				784F89CE29252F70001AFBE1 /* Main.storyboard */,
+				784F89D329252F72001AFBE1 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		784F89EC2927D3C3001AFBE1 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				784F89ED2927D3D0001AFBE1 /* Extensions.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +202,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				784F89CD29252F70001AFBE1 /* ViewController.swift in Sources */,
+				784F89DE2925317B001AFBE1 /* Zoo.swift in Sources */,
+				784F89E2292531C2001AFBE1 /* AnimalsProtocol.swift in Sources */,
+				784F89CD29252F70001AFBE1 /* HomepageVC.swift in Sources */,
+				784F89E729269C3F001AFBE1 /* AddZookeeperVC.swift in Sources */,
+				784F89E929269C54001AFBE1 /* AddAnimalVC.swift in Sources */,
+				782F086F2928316A00E52436 /* ZookeepersListVC.swift in Sources */,
+				784F89EE2927D3D0001AFBE1 /* Extensions.swift in Sources */,
 				784F89C929252F70001AFBE1 /* AppDelegate.swift in Sources */,
+				784F89E0292531AE001AFBE1 /* Zookeeper.swift in Sources */,
 				784F89CB29252F70001AFBE1 /* SceneDelegate.swift in Sources */,
+				784F89EB29269C81001AFBE1 /* AnimalsListsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +361,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q5TKUQ5ZUC;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ZooClient/Info.plist;
+				INFOPLIST_FILE = ZooClient/SupportFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -302,9 +374,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tolgakaanaysu.ZooClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,7 +392,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q5TKUQ5ZUC;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ZooClient/Info.plist;
+				INFOPLIST_FILE = ZooClient/SupportFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -330,9 +405,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tolgakaanaysu.ZooClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
