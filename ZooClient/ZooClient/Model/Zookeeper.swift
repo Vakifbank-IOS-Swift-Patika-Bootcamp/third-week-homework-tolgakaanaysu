@@ -19,7 +19,7 @@ protocol ZookeeperProtocol {
     init(name: String, age: Int, animalSpecialty: AnimalSpecies)
 }
 
-class Zookeeper: ZookeeperProtocol {
+final class Zookeeper: ZookeeperProtocol {
     var id : String
     var name: String
     var age: Int
@@ -37,7 +37,7 @@ class Zookeeper: ZookeeperProtocol {
         self.animals = []
     }
     
-    class func calculateSalary(age: Int, animalSpecialty: AnimalSpecies ) -> Int {
+    final class func calculateSalary(age: Int, animalSpecialty: AnimalSpecies ) -> Int {
         return age * 250 * animalSpecialty.coefficientOfMaintenance
     }
 }

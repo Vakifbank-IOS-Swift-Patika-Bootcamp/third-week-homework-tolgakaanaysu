@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddZookeeperVC: UIViewController {
+final class AddZookeeperVC: UIViewController {
     
     @IBOutlet private weak var nameTextField: UITextField!
     @IBOutlet private weak var ageTextField: UITextField!

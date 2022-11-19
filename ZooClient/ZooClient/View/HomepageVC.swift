@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomepageVC: UIViewController {
+final class HomepageVC: UIViewController {
     
     @IBOutlet private weak var waterLimitLabel: UILabel!
     @IBOutlet private weak var incomeLabel: UILabel!
@@ -21,6 +21,22 @@ class HomepageVC: UIViewController {
         super.viewDidLoad()
         setZoo()
         setLabels()
+        
+        
+        let zookeeper1 = Zookeeper(name: "Ahmet", age: 23, animalSpecialty: .cat)
+        let zookeeper2 = Zookeeper(name: "Ceyda", age: 35, animalSpecialty: .dog)
+        
+        let animal1 = Animals(name: "Duman", age: 2, species: .dog, waterConsumption: 4)
+        let animal2 = Animals(name: "Şakir", age: 1, species: .cat, waterConsumption: 1)
+        let animal3 = Animals(name: "Pamuk", age: 3, species: .cat, waterConsumption: 2)
+        
+        myZoo.addZookeeper(zooKeeper: zookeeper1)
+        myZoo.addZookeeper(zooKeeper: zookeeper2)
+       
+        
+        myZoo.addAnimals(animal: animal1, zooKeeper: zookeeper2)
+        myZoo.addAnimals(animal: animal2, zooKeeper: zookeeper1)
+        myZoo.addAnimals(animal: animal3, zooKeeper: zookeeper1)
         
     }
     
@@ -65,11 +81,17 @@ class HomepageVC: UIViewController {
     }
     
     
-    // Go to animal & zookeper lists page
-    @IBAction func goToZookeeperAnimalListButtonClicked(_ sender: Any) {
+    @IBAction func zookeepersButtonClicked(_ sender: Any) {
+        guard let zookeeperListVC = storyboard?.instantiateViewController(withIdentifier: "ZookeepersListVC_ID") as? ZookeepersListVC else { return }
+        zookeeperListVC.zookepers = myZoo.zooKeepers
+        navigationController?.pushViewController(zookeeperListVC, animated: true)
         
-        guard let listsVC = storyboard?.instantiateViewController(withIdentifier: "AnimalsVC_ID") as? AnimalsListsVC else { return }
-        self.navigationController?.pushViewController(listsVC, animated: true)
+    }
+   
+    @IBAction func animalsButtonClicked(_ sender: Any) {
+        guard let animalsListVC = storyboard?.instantiateViewController(withIdentifier: "AnimaListsVC_ID") as? AnimalsListsVC else { return }
+        animalsListVC.animals = myZoo.allAnimals
+        navigationController?.pushViewController(animalsListVC, animated: true)
     }
     
     private func setZoo(){

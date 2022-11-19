@@ -39,7 +39,6 @@ protocol ZooProtocol {
     
 }
 
-
 extension Array where Element == AnimalsProtocol {
     
     // Calculate all animals water consumption
@@ -52,7 +51,7 @@ extension Array where Element == AnimalsProtocol {
     }
 }
 
-class Zoo: ZooProtocol {
+final class Zoo: ZooProtocol {
     var waterLimit: Int
     var balance: Int = 0
     var zooKeepers: [ZookeeperProtocol] = []

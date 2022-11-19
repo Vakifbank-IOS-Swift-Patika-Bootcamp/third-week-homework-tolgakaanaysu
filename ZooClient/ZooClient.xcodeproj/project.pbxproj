@@ -16,11 +16,13 @@
 		784F89D529252F72001AFBE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 784F89D329252F72001AFBE1 /* LaunchScreen.storyboard */; };
 		784F89DE2925317B001AFBE1 /* Zoo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89DD2925317B001AFBE1 /* Zoo.swift */; };
 		784F89E0292531AE001AFBE1 /* Zookeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89DF292531AE001AFBE1 /* Zookeeper.swift */; };
-		784F89E2292531C2001AFBE1 /* AnimalsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89E1292531C2001AFBE1 /* AnimalsProtocol.swift */; };
+		784F89E2292531C2001AFBE1 /* Animals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89E1292531C2001AFBE1 /* Animals.swift */; };
 		784F89E729269C3F001AFBE1 /* AddZookeeperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89E629269C3F001AFBE1 /* AddZookeeperVC.swift */; };
 		784F89E929269C54001AFBE1 /* AddAnimalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89E829269C54001AFBE1 /* AddAnimalVC.swift */; };
 		784F89EB29269C81001AFBE1 /* AnimalsListsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89EA29269C81001AFBE1 /* AnimalsListsVC.swift */; };
 		784F89EE2927D3D0001AFBE1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89ED2927D3D0001AFBE1 /* Extensions.swift */; };
+		78C89D04292963F600EBB9CB /* ZookeeperListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C89D03292963F600EBB9CB /* ZookeeperListCell.swift */; };
+		78D92F4D292980AE00D561F2 /* AnimalsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D92F4C292980AE00D561F2 /* AnimalsListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,11 +37,13 @@
 		784F89D629252F72001AFBE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		784F89DD2925317B001AFBE1 /* Zoo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zoo.swift; sourceTree = "<group>"; };
 		784F89DF292531AE001AFBE1 /* Zookeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zookeeper.swift; sourceTree = "<group>"; };
-		784F89E1292531C2001AFBE1 /* AnimalsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsProtocol.swift; sourceTree = "<group>"; };
+		784F89E1292531C2001AFBE1 /* Animals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animals.swift; sourceTree = "<group>"; };
 		784F89E629269C3F001AFBE1 /* AddZookeeperVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddZookeeperVC.swift; path = ZooClient/View/AddZookeeperVC.swift; sourceTree = SOURCE_ROOT; };
 		784F89E829269C54001AFBE1 /* AddAnimalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnimalVC.swift; sourceTree = "<group>"; };
 		784F89EA29269C81001AFBE1 /* AnimalsListsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsListsVC.swift; sourceTree = "<group>"; };
 		784F89ED2927D3D0001AFBE1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		78C89D03292963F600EBB9CB /* ZookeeperListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZookeeperListCell.swift; sourceTree = "<group>"; };
+		78D92F4C292980AE00D561F2 /* AnimalsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 		784F89C729252F70001AFBE1 /* ZooClient */ = {
 			isa = PBXGroup;
 			children = (
+				78C89D02292963A200EBB9CB /* Cells */,
 				784F89EC2927D3C3001AFBE1 /* Utility */,
 				784F89E529253423001AFBE1 /* Storyboards */,
 				784F89DC29252FD5001AFBE1 /* SupportFiles */,
@@ -96,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				784F89DF292531AE001AFBE1 /* Zookeeper.swift */,
-				784F89E1292531C2001AFBE1 /* AnimalsProtocol.swift */,
+				784F89E1292531C2001AFBE1 /* Animals.swift */,
 				784F89DD2925317B001AFBE1 /* Zoo.swift */,
 			);
 			path = Model;
@@ -129,6 +134,15 @@
 				784F89ED2927D3D0001AFBE1 /* Extensions.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		78C89D02292963A200EBB9CB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				78C89D03292963F600EBB9CB /* ZookeeperListCell.swift */,
+				78D92F4C292980AE00D561F2 /* AnimalsListCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,15 +217,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				784F89DE2925317B001AFBE1 /* Zoo.swift in Sources */,
-				784F89E2292531C2001AFBE1 /* AnimalsProtocol.swift in Sources */,
+				784F89E2292531C2001AFBE1 /* Animals.swift in Sources */,
 				784F89CD29252F70001AFBE1 /* HomepageVC.swift in Sources */,
 				784F89E729269C3F001AFBE1 /* AddZookeeperVC.swift in Sources */,
 				784F89E929269C54001AFBE1 /* AddAnimalVC.swift in Sources */,
 				782F086F2928316A00E52436 /* ZookeepersListVC.swift in Sources */,
+				78C89D04292963F600EBB9CB /* ZookeeperListCell.swift in Sources */,
 				784F89EE2927D3D0001AFBE1 /* Extensions.swift in Sources */,
 				784F89C929252F70001AFBE1 /* AppDelegate.swift in Sources */,
 				784F89E0292531AE001AFBE1 /* Zookeeper.swift in Sources */,
 				784F89CB29252F70001AFBE1 /* SceneDelegate.swift in Sources */,
+				78D92F4D292980AE00D561F2 /* AnimalsListCell.swift in Sources */,
 				784F89EB29269C81001AFBE1 /* AnimalsListsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,23 +7,32 @@
 
 import UIKit
 
-class ZookeepersListVC: UIViewController {
+final class ZookeepersListVC: UIViewController {
 
+    @IBOutlet private weak var zookeepersTableview: UITableView!
+    
+    var zookepers: [ZookeeperProtocol]?
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard zookepers != nil else { return }
+        zookeepersTableview.dataSource = self
+        zookeepersTableview.delegate = self
+        
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension ZookeepersListVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        zookepers!.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "zookeeperListCell", for: indexPath) as? ZookeeperListCell else { return UITableViewCell()}
+        let zookeeper = zookepers![indexPath.row]
+        
+        cell.configurationUI(zookeeper: zookeeper)
+        return cell
     }
-    */
-
+    
+   
 }

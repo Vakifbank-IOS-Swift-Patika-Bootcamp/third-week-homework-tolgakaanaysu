@@ -7,14 +7,30 @@
 
 import UIKit
 
-class AnimalsListsVC: UIViewController {
-
+final class AnimalsListsVC: UIViewController {
+    
+    @IBOutlet private weak var animalsTableView: UITableView!
+    var animals: [AnimalsProtocol]?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard animals != nil else { return }
+        animalsTableView.delegate = self
+        animalsTableView.dataSource = self
+        
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension AnimalsListsVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "animalsListCell", for: indexPath) as! AnimalsListCell
+        let animal = animals![indexPath.row]
+        cell.configurationUI(animal: animal)
+        return cell
     }
     
-
-
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        animals!.count
+    }
 }

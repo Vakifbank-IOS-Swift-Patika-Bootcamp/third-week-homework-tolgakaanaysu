@@ -21,7 +21,7 @@ protocol AnimalsProtocol {
     
 }
 
-class Animals: AnimalsProtocol {
+final class Animals: AnimalsProtocol {
     var id: String
     var name: String
     var species: AnimalSpecies

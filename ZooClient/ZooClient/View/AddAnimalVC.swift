@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddAnimalVC: UIViewController {
+final class AddAnimalVC: UIViewController {
     
     @IBOutlet private weak var nameTextField: UITextField!
     @IBOutlet private weak var ageTextField: UITextField!
