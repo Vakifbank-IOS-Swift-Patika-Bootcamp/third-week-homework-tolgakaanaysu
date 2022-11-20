@@ -7,12 +7,15 @@
 
 import UIKit
 import MaterialActivityIndicator
-class ViewController: UIViewController {
+
+final class QuoteVC: UIViewController {
     
     @IBOutlet private weak var authorLabel: UILabel!
     @IBOutlet private weak var quotesLabel: UILabel!
     @IBOutlet private weak var newQuoteButton: UIButton!
     let indicator = MaterialActivityIndicatorView()
+    
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         newQuoteButton.isHidden = true
@@ -23,10 +26,12 @@ class ViewController: UIViewController {
         getQuotes()
     }
     
+    //MARK: - IBActions
     @IBAction func newQuotesButtonClicked(_ sender: Any) {
         getQuotes()
     }
     
+    //MARK: - Private methods
     private func getQuotes(){
         indicator.startAnimating()
         Client.getQuotes {[weak self] quotes, error in
@@ -49,7 +54,7 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    //setup activity indicator
     private func setupActivityIndicatorView() {
           view.addSubview(indicator)
           setupActivityIndicatorViewConstraints()
@@ -60,6 +65,5 @@ class ViewController: UIViewController {
           indicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
           indicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
       }
-    
 }
 
