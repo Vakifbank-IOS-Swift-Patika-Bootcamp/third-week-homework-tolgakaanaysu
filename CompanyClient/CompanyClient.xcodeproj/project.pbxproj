@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		784F89AE2923EB84001AFBE1 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = 784F89AD2923EB84001AFBE1 /* Notes */; };
-		784F89B02923ED20001AFBE1 /* UserDefaults-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89AF2923ED20001AFBE1 /* UserDefaults-Extension.swift */; };
 		784F89B629242E4A001AFBE1 /* EmployeeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89B529242E4A001AFBE1 /* EmployeeListVC.swift */; };
 		784F89BA29243494001AFBE1 /* EmployeeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89B829243494001AFBE1 /* EmployeeListCell.swift */; };
 		784F89BB29243494001AFBE1 /* EmployeeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 784F89B929243494001AFBE1 /* EmployeeListCell.xib */; };
@@ -26,8 +24,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		784F89AD2923EB84001AFBE1 /* Notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
-		784F89AF2923ED20001AFBE1 /* UserDefaults-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults-Extension.swift"; sourceTree = "<group>"; };
 		784F89B529242E4A001AFBE1 /* EmployeeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListVC.swift; sourceTree = "<group>"; };
 		784F89B829243494001AFBE1 /* EmployeeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListCell.swift; sourceTree = "<group>"; };
 		784F89B929243494001AFBE1 /* EmployeeListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeListCell.xib; sourceTree = "<group>"; };
@@ -57,18 +53,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		784F89B429242DE8001AFBE1 /* EmployeeList-module */ = {
+		78330BC1292AAE6400153DCC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				784F89B72924301C001AFBE1 /* View */,
+				7890AA9D29222F1A0069E176 /* Employee.swift */,
+				7890AA9529222CD40069E176 /* Company.swift */,
+				7890AA9A29222E8D0069E176 /* CompanyManager.swift */,
 			);
-			path = "EmployeeList-module";
+			path = Model;
+			sourceTree = "<group>";
+		};
+		78330BC2292AAEA500153DCC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7890AA8329222B0E0069E176 /* CompanyVC.swift */,
+				7890AAA02922636B0069E176 /* EmployeeVC.swift */,
+				784F89B529242E4A001AFBE1 /* EmployeeListVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		784F89B72924301C001AFBE1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				784F89B529242E4A001AFBE1 /* EmployeeListVC.swift */,
 				784F89B829243494001AFBE1 /* EmployeeListCell.swift */,
 				784F89B929243494001AFBE1 /* EmployeeListCell.xib */,
 			);
@@ -102,79 +109,26 @@
 		7890AA7E29222B0E0069E176 /* CompanyClient */ = {
 			isa = PBXGroup;
 			children = (
-				784F89AD2923EB84001AFBE1 /* Notes */,
-				7890AA8529222B0E0069E176 /* Main.storyboard */,
-				7890AA8A29222B130069E176 /* LaunchScreen.storyboard */,
-				784F89AF2923ED20001AFBE1 /* UserDefaults-Extension.swift */,
+				78330BC2292AAEA500153DCC /* Controller */,
+				78330BC1292AAE6400153DCC /* Model */,
 				7890AA9829222D5C0069E176 /* SupportFiles */,
-				7890AA9929222E2C0069E176 /* Company-module */,
-				7890AA9C29222EC60069E176 /* AddEmployee-module */,
-				784F89B429242DE8001AFBE1 /* EmployeeList-module */,
+				784F89B72924301C001AFBE1 /* View */,
 				784F89F12927D52C001AFBE1 /* Utility */,
 			);
 			path = CompanyClient;
 			sourceTree = "<group>";
 		};
-		7890AA9429222CC60069E176 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				7890AA8329222B0E0069E176 /* CompanyVC.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		7890AA9729222CDA0069E176 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				7890AA9529222CD40069E176 /* Company.swift */,
-				7890AA9A29222E8D0069E176 /* CompanyManager.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		7890AA9829222D5C0069E176 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				7890AA8529222B0E0069E176 /* Main.storyboard */,
+				7890AA8A29222B130069E176 /* LaunchScreen.storyboard */,
 				7890AA8D29222B130069E176 /* Info.plist */,
 				7890AA8129222B0E0069E176 /* SceneDelegate.swift */,
 				7890AA7F29222B0E0069E176 /* AppDelegate.swift */,
 				7890AA8829222B130069E176 /* Assets.xcassets */,
 			);
 			path = SupportFiles;
-			sourceTree = "<group>";
-		};
-		7890AA9929222E2C0069E176 /* Company-module */ = {
-			isa = PBXGroup;
-			children = (
-				7890AA9429222CC60069E176 /* View */,
-				7890AA9729222CDA0069E176 /* Model */,
-			);
-			path = "Company-module";
-			sourceTree = "<group>";
-		};
-		7890AA9C29222EC60069E176 /* AddEmployee-module */ = {
-			isa = PBXGroup;
-			children = (
-				7890AAA22922637A0069E176 /* View */,
-				7890AA9F29222F780069E176 /* Model */,
-			);
-			path = "AddEmployee-module";
-			sourceTree = "<group>";
-		};
-		7890AA9F29222F780069E176 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				7890AA9D29222F1A0069E176 /* Employee.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		7890AAA22922637A0069E176 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				7890AAA02922636B0069E176 /* EmployeeVC.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +191,6 @@
 			files = (
 				7890AA8C29222B130069E176 /* LaunchScreen.storyboard in Resources */,
 				7890AA8929222B130069E176 /* Assets.xcassets in Resources */,
-				784F89AE2923EB84001AFBE1 /* Notes in Resources */,
 				7890AA8729222B0E0069E176 /* Main.storyboard in Resources */,
 				784F89BB29243494001AFBE1 /* EmployeeListCell.xib in Resources */,
 			);
@@ -250,7 +203,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				784F89B02923ED20001AFBE1 /* UserDefaults-Extension.swift in Sources */,
 				7890AAA12922636B0069E176 /* EmployeeVC.swift in Sources */,
 				7890AA8429222B0E0069E176 /* CompanyVC.swift in Sources */,
 				784F89F02927D527001AFBE1 /* Extensions.swift in Sources */,

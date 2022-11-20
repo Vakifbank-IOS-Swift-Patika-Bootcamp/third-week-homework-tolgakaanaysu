@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+// convert from integer type to string type
 extension String {
     func toInteger() -> Int? {
         guard let integer = Int(self) else { return nil}
@@ -14,6 +16,7 @@ extension String {
     }
 }
 
+// convert from string type to integer type
 extension Int {
     func toString() -> String? {
         return String(self)

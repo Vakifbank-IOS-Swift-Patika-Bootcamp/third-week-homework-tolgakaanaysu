@@ -7,13 +7,13 @@
 
 import UIKit
 
-class EmployeeVC: UIViewController {
+final class EmployeeVC: UIViewController {
     
-    @IBOutlet var nameTextField: UITextField!
-    @IBOutlet var ageTextField: UITextField!
-    @IBOutlet var maritalStatusTextField: UITextField!
-    @IBOutlet var developerTypeTextField: UITextField!
-    @IBOutlet var salaryLabel: UILabel!
+    @IBOutlet private weak var nameTextField: UITextField!
+    @IBOutlet private weak var ageTextField: UITextField!
+    @IBOutlet private weak var maritalStatusTextField: UITextField!
+    @IBOutlet private weak var developerTypeTextField: UITextField!
+    @IBOutlet private weak var salaryLabel: UILabel!
     weak var pickerView: UIPickerView?
     let maritalStatusArray = MaritalStatus.allCases
     let developerTypeArray = DeveloperType.allCases
@@ -21,7 +21,7 @@ class EmployeeVC: UIViewController {
     var myCompany: Company?
     
     
-    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +30,7 @@ class EmployeeVC: UIViewController {
         
     }
     
+    //MARK: - IBActions
     @IBAction func textFieldsEditingChanged(_ sender: UITextField) {
         
         guard let ageString = ageTextField.text,
@@ -43,7 +44,6 @@ class EmployeeVC: UIViewController {
     
     @IBAction func textFieldDidBeginEditing(_ sender: UITextField) {
         pickerView?.reloadAllComponents()
-        
     }
     
     @IBAction func addEmployeeButton(_ sender: Any) {
@@ -60,7 +60,6 @@ class EmployeeVC: UIViewController {
         
         myCompany.addEmployeeToCompany(employee, developerType: developerType)
         self.dismiss(animated: true)
-        print(employee.salary ?? 0)
     }
 }
 
@@ -100,7 +99,6 @@ extension EmployeeVC: UIPickerViewDataSource {
         }
         else if developerTypeTextField.isFirstResponder {
             return developerTypeArray.count
-            
         }
         return 0
     }

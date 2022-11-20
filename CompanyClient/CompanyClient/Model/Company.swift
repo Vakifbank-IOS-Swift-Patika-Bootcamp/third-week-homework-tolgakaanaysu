@@ -8,7 +8,7 @@
 import Foundation
 
 
-class Company  {
+final class Company  {
     var name: String
     let foundationYear: Int
     var addres: String?

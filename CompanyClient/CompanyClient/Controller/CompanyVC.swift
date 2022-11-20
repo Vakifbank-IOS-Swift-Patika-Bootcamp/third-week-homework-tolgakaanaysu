@@ -7,16 +7,17 @@
 
 import UIKit
 
-class CompanyVC: UIViewController {
+final class CompanyVC: UIViewController {
     
-    @IBOutlet var companyNameLabel: UILabel!
-    @IBOutlet var companyFoundationYearLabel: UILabel!
-    @IBOutlet var companyAddresLabel: UILabel!
-    @IBOutlet var balanceLabel: UILabel!
-    @IBOutlet var addMoneyTextField: UITextField!
-    @IBOutlet var withdrowMoneyTextField: UITextField!
+    @IBOutlet private weak var companyNameLabel: UILabel!
+    @IBOutlet private weak var companyFoundationYearLabel: UILabel!
+    @IBOutlet private weak var companyAddresLabel: UILabel!
+    @IBOutlet private weak var balanceLabel: UILabel!
+    @IBOutlet private weak var addMoneyTextField: UITextField!
+    @IBOutlet private weak var withdrowMoneyTextField: UITextField!
     var myCompany: Company!
     
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setCompany()
@@ -30,6 +31,7 @@ class CompanyVC: UIViewController {
         
     }
     
+    //MARK: - IBActions
     @IBAction func addMoneyButton(_ sender: Any) {
         guard let amount = addMoneyTextField.text  else {
             return
@@ -53,6 +55,7 @@ class CompanyVC: UIViewController {
         setBalanceLabelText()
     }
     
+    
     @IBAction func paySalaryButton(_ sender: Any) {
         myCompany.paySalaries()
         setBalanceLabelText()
@@ -72,6 +75,8 @@ class CompanyVC: UIViewController {
         self.navigationController?.pushViewController(employeeListVC, animated: true)
     }
     
+    
+    //MARK: - Private Methods
     private func setBalanceLabelText(){
         balanceLabel.text = "\(myCompany.balance)₺"
     }

@@ -7,20 +7,24 @@
 
 import UIKit
 
-class EmployeeListVC: UIViewController {
+final class EmployeeListVC: UIViewController {
 
-    @IBOutlet weak var employeeTableView: UITableView!
+    @IBOutlet private weak var employeeTableView: UITableView! {
+        didSet{
+            employeeTableView.delegate = self
+            employeeTableView.dataSource = self
+        }
+    }
     var myCompany: Company?
     var emmloyeesToShow: [EmployeeProtocol] = []
     
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         guard myCompany != nil else { return }
         
-       
-        employeeTableView.delegate = self
-        employeeTableView.dataSource = self
+     
         
         // register EmployeeListCell
        employeeTableView.register(UINib(nibName: "EmployeeListCell", bundle: nil), forCellReuseIdentifier: "EmployeeItemCell")

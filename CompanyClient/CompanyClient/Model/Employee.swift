@@ -16,6 +16,7 @@ enum DeveloperType: CaseIterable {
     case mid
     case senior
     
+    //convert from enum type to string type
     var toString: String {
         switch self {
         case .intern:
@@ -59,7 +60,7 @@ enum MaritalStatus: CaseIterable {
     }
 }
 
-
+// Convert from string type to custom enum types
 extension String {
     func toDeveloperType() -> DeveloperType? {
         switch self {
@@ -85,8 +86,6 @@ extension String {
         default:
             return nil
         }
-    
-        
     }
 }
 
@@ -100,7 +99,8 @@ protocol EmployeeProtocol {
     
 }
 
-class Employee: EmployeeProtocol {
+//MARK: - Employee Class
+final class Employee: EmployeeProtocol {
     var name: String
     var age: Int
     var maritalStatus: MaritalStatus
@@ -120,5 +120,4 @@ class Employee: EmployeeProtocol {
     class func calculateSalary(age: Int, developerType: DeveloperType) -> Int {
         return age * developerType.coefficient * 100
     }
-    
 }
