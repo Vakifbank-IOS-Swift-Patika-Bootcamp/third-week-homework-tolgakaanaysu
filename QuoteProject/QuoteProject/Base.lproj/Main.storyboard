@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QuoteProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reC-IZ-Ic0">
+                                <rect key="frame" x="157.33333333333334" y="87" width="75.666666666666657" height="31.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gRa-fN-fNs">
+                                <rect key="frame" x="16" y="134.33333333333334" width="358" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeJ-ek-QHR">
+                                <rect key="frame" x="136" y="214.66666666666666" width="118" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="New Quotes"/>
+                                <connections>
+                                    <action selector="newQuotesButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nce-C4-n5O"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gRa-fN-fNs" firstAttribute="top" secondItem="reC-IZ-Ic0" secondAttribute="bottom" constant="16" id="4f3-o8-qhs"/>
+                            <constraint firstItem="reC-IZ-Ic0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="957-qg-wu2"/>
+                            <constraint firstItem="NeJ-ek-QHR" firstAttribute="top" secondItem="gRa-fN-fNs" secondAttribute="bottom" constant="60" id="Bv6-Xs-hK8"/>
+                            <constraint firstItem="NeJ-ek-QHR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eM6-jJ-PmS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gRa-fN-fNs" secondAttribute="trailing" constant="16" id="jak-Ab-Zqm"/>
+                            <constraint firstItem="gRa-fN-fNs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pb3-dQ-a2G"/>
+                            <constraint firstItem="reC-IZ-Ic0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ssg-tX-Ycv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="reC-IZ-Ic0" id="Ro3-E5-9tx"/>
+                        <outlet property="newQuoteButton" destination="NeJ-ek-QHR" id="rre-Hs-AY2"/>
+                        <outlet property="quotesLabel" destination="gRa-fN-fNs" id="lHX-V7-fZE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36.92307692307692" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
