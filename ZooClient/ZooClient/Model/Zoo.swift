@@ -47,6 +47,7 @@ extension Array where Element == AnimalsProtocol {
         for animal in self {
             total += animal.waterConsumption
         }
+        print(total)
         return total
     }
 }

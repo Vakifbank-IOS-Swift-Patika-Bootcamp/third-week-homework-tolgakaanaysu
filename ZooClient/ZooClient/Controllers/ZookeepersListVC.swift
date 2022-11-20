@@ -15,6 +15,7 @@ final class ZookeepersListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         guard zookepers != nil else { return }
+        title = "Zookeeper List"
         zookeepersTableview.dataSource = self
         zookeepersTableview.delegate = self
         

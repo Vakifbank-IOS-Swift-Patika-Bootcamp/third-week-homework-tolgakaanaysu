@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		782F086F2928316A00E52436 /* ZookeepersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782F086E2928316A00E52436 /* ZookeepersListVC.swift */; };
+		78330B94292A44AD00153DCC /* AddZookeeperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78330B93292A44AD00153DCC /* AddZookeeperVC.swift */; };
 		784F89C929252F70001AFBE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89C829252F70001AFBE1 /* AppDelegate.swift */; };
 		784F89CB29252F70001AFBE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89CA29252F70001AFBE1 /* SceneDelegate.swift */; };
 		784F89CD29252F70001AFBE1 /* HomepageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89CC29252F70001AFBE1 /* HomepageVC.swift */; };
@@ -17,7 +18,6 @@
 		784F89DE2925317B001AFBE1 /* Zoo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89DD2925317B001AFBE1 /* Zoo.swift */; };
 		784F89E0292531AE001AFBE1 /* Zookeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89DF292531AE001AFBE1 /* Zookeeper.swift */; };
 		784F89E2292531C2001AFBE1 /* Animals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89E1292531C2001AFBE1 /* Animals.swift */; };
-		784F89E729269C3F001AFBE1 /* AddZookeeperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89E629269C3F001AFBE1 /* AddZookeeperVC.swift */; };
 		784F89E929269C54001AFBE1 /* AddAnimalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89E829269C54001AFBE1 /* AddAnimalVC.swift */; };
 		784F89EB29269C81001AFBE1 /* AnimalsListsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89EA29269C81001AFBE1 /* AnimalsListsVC.swift */; };
 		784F89EE2927D3D0001AFBE1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F89ED2927D3D0001AFBE1 /* Extensions.swift */; };
@@ -27,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		782F086E2928316A00E52436 /* ZookeepersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZookeepersListVC.swift; sourceTree = "<group>"; };
+		78330B93292A44AD00153DCC /* AddZookeeperVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddZookeeperVC.swift; sourceTree = "<group>"; };
 		784F89C529252F70001AFBE1 /* ZooClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZooClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		784F89C829252F70001AFBE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		784F89CA29252F70001AFBE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		784F89DD2925317B001AFBE1 /* Zoo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zoo.swift; sourceTree = "<group>"; };
 		784F89DF292531AE001AFBE1 /* Zookeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zookeeper.swift; sourceTree = "<group>"; };
 		784F89E1292531C2001AFBE1 /* Animals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animals.swift; sourceTree = "<group>"; };
-		784F89E629269C3F001AFBE1 /* AddZookeeperVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddZookeeperVC.swift; path = ZooClient/View/AddZookeeperVC.swift; sourceTree = SOURCE_ROOT; };
 		784F89E829269C54001AFBE1 /* AddAnimalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnimalVC.swift; sourceTree = "<group>"; };
 		784F89EA29269C81001AFBE1 /* AnimalsListsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsListsVC.swift; sourceTree = "<group>"; };
 		784F89ED2927D3D0001AFBE1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 				784F89E529253423001AFBE1 /* Storyboards */,
 				784F89DC29252FD5001AFBE1 /* SupportFiles */,
 				784F89E3292533F5001AFBE1 /* Model */,
-				784F89E42925340D001AFBE1 /* View */,
+				784F89E42925340D001AFBE1 /* Controllers */,
 			);
 			path = ZooClient;
 			sourceTree = "<group>";
@@ -107,16 +107,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		784F89E42925340D001AFBE1 /* View */ = {
+		784F89E42925340D001AFBE1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				784F89CC29252F70001AFBE1 /* HomepageVC.swift */,
-				784F89E629269C3F001AFBE1 /* AddZookeeperVC.swift */,
+				78330B93292A44AD00153DCC /* AddZookeeperVC.swift */,
 				784F89E829269C54001AFBE1 /* AddAnimalVC.swift */,
 				784F89EA29269C81001AFBE1 /* AnimalsListsVC.swift */,
 				782F086E2928316A00E52436 /* ZookeepersListVC.swift */,
 			);
-			path = View;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		784F89E529253423001AFBE1 /* Storyboards */ = {
@@ -219,7 +219,7 @@
 				784F89DE2925317B001AFBE1 /* Zoo.swift in Sources */,
 				784F89E2292531C2001AFBE1 /* Animals.swift in Sources */,
 				784F89CD29252F70001AFBE1 /* HomepageVC.swift in Sources */,
-				784F89E729269C3F001AFBE1 /* AddZookeeperVC.swift in Sources */,
+				78330B94292A44AD00153DCC /* AddZookeeperVC.swift in Sources */,
 				784F89E929269C54001AFBE1 /* AddAnimalVC.swift in Sources */,
 				782F086F2928316A00E52436 /* ZookeepersListVC.swift in Sources */,
 				78C89D04292963F600EBB9CB /* ZookeeperListCell.swift in Sources */,

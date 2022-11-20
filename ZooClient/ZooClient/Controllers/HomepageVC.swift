@@ -15,7 +15,11 @@ final class HomepageVC: UIViewController {
     @IBOutlet private weak var balanceLabel: UILabel!
     @IBOutlet private weak var addIncomeTextField: UITextField!
     @IBOutlet private weak var addExpenseTextField: UITextField!
-    var myZoo: Zoo!
+    var myZoo: Zoo! {
+        didSet{
+            setWaterLimitLabel()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
