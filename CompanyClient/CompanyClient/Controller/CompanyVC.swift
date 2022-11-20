@@ -86,7 +86,7 @@ final class CompanyVC: UIViewController {
         companyNameLabel.text = myCompany.name
         companyAddresLabel.text = myCompany.addres
         companyFoundationYearLabel.text = String(myCompany.foundationYear)
-        balanceLabel.text = String(myCompany.balance)
+        balanceLabel.text = String(myCompany.balance) + "₺"
     }
 }
 
